@@ -1,24 +1,12 @@
 package db
+
 import (
-	"strings"
-	"encoding/json"
-	"os"
 	"database/common"
 	"fmt"
+	"strings"
 )
 
-func Export() (error) {
-	var configs interface{}
-	fr, err := os.Open("./config.json")
-	if err != nil {
-		return err
-	}
-	decoder := json.NewDecoder(fr)
-	err = decoder.Decode(&configs)
-	if err != nil {
-		return err
-	}
-	confs := configs.(map[string]interface{})
+func Export(confs map[string]interface{} ) (error) {
 	sqlPath := confs["sqlPath"].(string)
 	ch := make(chan string)
 	for key, value := range confs {

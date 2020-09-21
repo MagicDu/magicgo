@@ -1,17 +1,18 @@
 {
   "db_1": {
-    "db_host": "127.0.0.1",
-    "db_port": "3306",
-    "db_user": "root",
-    "db_pass": "123456",
-    "db_name": "base"
-  },
-  "db_2": {
-    "db_host": "127.0.0.1",
+    "db_host": "192.168.10.185",
     "db_port": "3306",
     "db_user": "root",
     "db_pass": "123456",
     "db_name": "cloud"
   },
-  "sqlPath": "/home/aaa/t1/"
+  "db_2": {
+    "db_host": "192.168.10.185",
+    "db_port": "3306",
+    "db_user": "root",
+    "db_pass": "123456",
+    "db_name": "admin"
+  },
+  "sqlPath": "/root/databasebackup/",
+   "spec":"*/50 * * * * ?"
 }
